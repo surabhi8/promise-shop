@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest Ex2/solution-test.js"
+    "test": "jest Ex3/solution-test.js"
   },
   "author": "",
   "license": "ISC",
