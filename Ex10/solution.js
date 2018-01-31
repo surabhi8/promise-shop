@@ -6,9 +6,7 @@ const iterate = (argument) => {
   global.console.log(argument);
   return argument + 1;
 };
-const onReject = (error) => {
-  global.console.log(error.message);
-};
+const onReject = error => error.message;
 
 const newPromise = () => {
   const promise = Promise.resolve(iterate(1))
