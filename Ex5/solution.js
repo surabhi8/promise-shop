@@ -1,10 +1,12 @@
-const promise = require('es6-promise');
-
-const asyncPromise = new Promise((resolve, reject) => {
-  resolve('PROMISE VALUE');
-});
-
-asyncPromise.then(console.log);
-console.log('MAIN PROGRAM');
-
-module.exports = asyncPromise;
+const asyncFn = (callback) => {
+  const asyncPromise = new Promise((resolve, reject) => {
+    resolve('PROMISE VALUE');
+  });
+  let result = '';
+  asyncPromise.then((data) => {
+    result += data;
+    callback(result);
+  });
+  result += 'MAIN PROGRAM ';
+};
+module.exports = asyncFn;

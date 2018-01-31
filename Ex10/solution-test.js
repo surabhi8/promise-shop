@@ -14,8 +14,8 @@ describe('Tests for checking error handling in promises usiong catch', () => {
     expect(newPromise()).toBeInstanceOf(Promise);
     done();
   });
-  test('NewPromise returned promise throw error', (done) => {
-    expect(newPromise()).resolves.toBe('OH NOES');
+  test('NewPromise returned promise which is resolved', (done) => {
+    expect(newPromise()).rejects.toThrow('OH NOES');
     done();
   });
 });
